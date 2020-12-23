@@ -26,18 +26,21 @@ const findDom = (tar, dat) => {
 					.children('a')
 					.each(function () {
 						let isImg = $(this).children('img').length > 0;
+						let dat = {};
 						if (isImg) {
 							let img = $(this).children('img')[0].getAttribute('src');
-							op.push({
-								url: this.getAttribute('href'),
-								img: img,
-							});
+							dat.url = this.getAttribute('href');
+							dat.img = img;
 						} else {
-							op.push({
-								name: this.innerText,
-								url: this.getAttribute('href'),
-							});
+							dat.name = this.innerText;
+							dat.url = this.getAttribute('href');
 						}
+
+						let dl = $(this).attr('dataLayer');
+						console.log(dl);
+						if (dl) dat.dataLayer = dl;
+
+						op.push(dat);
 					});
 				txt = op;
 			}
