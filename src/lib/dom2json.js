@@ -37,7 +37,6 @@ const findDom = (tar, dat) => {
 						}
 
 						let dl = $(this).attr('dataLayer');
-						console.log(dl);
 						if (dl) dat.dataLayer = dl;
 
 						op.push(dat);

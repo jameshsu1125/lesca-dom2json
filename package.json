@@ -1,6 +1,6 @@
 {
 	"name": "lesca-dom2json",
-	"version": "1.0.5",
+	"version": "1.0.6",
 	"description": "convert DOM element to JSON format.",
 	"main": "lib/index.js",
 	"scripts": {
