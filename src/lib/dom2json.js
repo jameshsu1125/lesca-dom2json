@@ -48,9 +48,7 @@ const findDom = (tar, dat) => {
 				let sup = $(this).children('sup').length;
 				let sub = $(this).children('sub').length;
 				if (sup > 0 || sub > 0) txt = $(this).html();
-			}
 
-			if (len == 0) {
 				let isImg = $(this).children('img').length > 0;
 				if (isImg) {
 					txt = $(this).children('img')[0].getAttribute('src');
